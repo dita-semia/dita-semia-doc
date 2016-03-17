@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_ksm_4tb_gv">
+    <title>Generating a sequence diagram</title>
+    <shortdesc/>
+    <taskbody>
+        <context>
+            <p>Sequence diagrams can be generated from DITA content with the XSLT-Conref
+                    <codeph>sequence-diagram.xsl</codeph>. The XSLT script determines the data
+                source for the diagram.</p>
+            <p>In the presented use case, the script refers to the following elements:<ul
+                    id="ul_khy_zmc_gv">
+                    <li>
+                        <p>The first <codeph>codeph</codeph> element within the first
+                                <codeph>p</codeph> element of the section is declared as
+                            &quot;callingComponentName&quot;.</p>
+                    </li>
+                    <li>
+                        <p>All <codeph>codeph</codeph> elements within the first <codeph>sl</codeph>
+                            element serve as function calls in the form
+                            &quot;&lt;component-name>.&lt;function-name>&quot;.</p>
+                    </li>
+                </ul></p>
+            <p>The script <codeph>draw-sequence-diagram.xsl</codeph> generates the diagram from
+                these data. Click the refresh button to display changes. You do not have to save the
+                file first.</p>
+            <p>In this example, both data source and XSLT-Conref are placed in the same section. Two
+                more realistic scenarios are:<ul id="ul_qy1_jgc_gv">
+                    <li>
+                        <p>The data is obtained from semantically specialized DITA content. For
+                            instance, the workflow of a component contains functions calls with
+                            specialized elements.</p>
+                    </li>
+                    <li>
+                        <p>The data is specified in a section that is designated for this purpose
+                            only. It is displayed in oXygen but will be suppressed in the
+                            output.</p>
+                    </li>
+                </ul></p>
+        </context>
+        <steps>
+            <step>
+                <cmd></cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_en4_gfm_2v">
+    <title>Including dynamic content in a SVG</title>
+    <shortdesc/>
+    <taskbody>
+        <context>
+            <p>XSLT-Conref lets you create dynamic graphical content by including referenced content
+                in vector graphics.</p>
+            <p>The script <codeph>svg-simple-test.xsl</codeph> generates an SVG graphic of a box
+                with static dimensions, and inserts the title of the DITA topic with XSLT-Conref.
+                The referenced text is inserted centered with constant text size. Automatic line
+                wrapping or scaling is not supported yet.</p>
+            <p>After changing the referenced topic title, click the refresh button to display the
+                changes in the graphic. You do not have to save the file first.</p>
+        </context>
+        <steps>
+            <step>
+                <cmd></cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

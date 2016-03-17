@@ -4,6 +4,23 @@
  <title>XSLT-Conref use cases</title>
  <shortdesc/>
  <conbody>
-  <p/>
+  <p>The XSLT-Conref use cases are stored in the folder
+    <codeph>org.dita-semia.resolver/samples/xslt-conref</codeph>.</p>
+    <p>Adjust the following settings to use XSLT-Conref in your own DITA topics:<ul
+        id="ul_gmq_cyy_gv">
+        <li>
+          <p>Include these XML declarations
+            :<codeblock>&lt;?xml-model href="urn:dita-semia:xslt-conref:schema:xslt-conref-topic.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+&lt;?xml-model href="urn:dita-semia:xslt-conref:schema:xslt-conref-topic.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?></codeblock>In
+            the <codeph>href</codeph> attribute values, replace the word &quot;topic&quot; by
+            &quot;reference&quot; if you work in a reference topic. Concept and task topics are not
+              supported.<draft-comment author="TiMe">Is that correct?</draft-comment></p>
+        </li>
+        <li>
+          <p>Insert the following namespace declarations in your root
+            element:<codeblock>xmlns:xcr = "http://www.dita-semia.org/xslt-conref"
+xmlns:xcrcp = "http://www.dita-semia.org/xslt-conref/custom-parameter"</codeblock></p>
+        </li>
+      </ul></p>
  </conbody>
 </concept>

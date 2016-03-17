@@ -1,47 +1,115 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
 <task id="t_integr_sep_framew">
-    <title>Integrating DITA-SEMIA in a separate frameworks folder</title>
+    <title>Integrating DITA-SEMIA into an oXygen custom frameworks folder</title>
     <shortdesc/>
     <taskbody>
         <prereq>
             <ul id="ul_c14_bwm_y5">
                 <li>
-                    <p>You have integrated DITA-SEMIA in DITA-OT (see <xref
-                            href="t_integr_dita_ot.dita#t_integr_dita_ot"/>).</p>
+                    <p>You created a custom frameworks folder.</p>
                 </li>
                 <li>
-                    <p/>
+                    <p>You integrated DITA-SEMIA into DITA-OT of your custom framework (see <xref
+                            href="t_integr_dita_ot.dita#t_integr_dita_ot"/>).</p>
                 </li>
             </ul>
         </prereq>
         <context>
-            <p>To integrate DITA-SEMIA into your own custom framework you have to do the following
-                steps:</p>
+            <p>To integrate DITA-SEMIA into an oXygen custom frameworks folder, complete the
+                following steps:</p>
         </context>
         <steps id="steps_cv5_4bn_y5">
             <step>
-                <cmd>Add the jar library to the classpath:
-                        <codeph>dita-ot/plugins/org.dita-semia.resolver/java/oxygen/DitaSemiaOxygen.jar</codeph></cmd>
+                <cmd>Complete the procedure described in <xref
+                        href="t_integr_oxygen_framework.dita#t_integr_oxy_framew"/>, but select the
+                    folder <codeph>org.dita-semia.resolver</codeph> in your custom framework.</cmd>
             </step>
             <step>
-                <cmd>Set the "Extension-Bundle":
-                        <codeph>org.DitaSemia.Oxygen.DitaSemiaExtensionBundle</codeph> or
-                        <codeph>org.DitaSemia.Oxygen.DitaSemiaMapExtensionBundle</codeph></cmd>
+                <cmd>In <menucascade>
+                        <uicontrol>Options</uicontrol>
+                        <uicontrol>Preferences</uicontrol>
+                        <uicontrol>Document Type Association</uicontrol>
+                    </menucascade>, activate the checkboxes <uicontrol>Enabled</uicontrol> of the
+                    DITA-SEMIA document types.</cmd>
             </step>
             <step>
-                <cmd>Add the css files
-                        <codeph>dita-ot/plugins/org.dita-semia.resolver/oxygen-framework/css/xslt-conref.less</codeph></cmd>
+                <cmd>Double-click the DITA-SEMIA document type.<draft-comment author="TiMe">Which of
+                        the following steps must be repeated for DITA
+                    Map-SEMIA?</draft-comment></cmd>
+                <stepresult>The dialog <uicontrol>Document type</uicontrol> opens.</stepresult>
             </step>
             <step>
-                <cmd>Add the library
-                        <codeph>dita-ot/plugins/org.dita-semia.resolver/java/ot/DitaSemiaOt.jar</codeph>
-                    to <i>all</i> DITA-OT transformation scenarios.</cmd>
+                <cmd>In the tab <uicontrol>Classpath</uicontrol>, click<uicontrol> New</uicontrol>
+                    (the icon <image id="oxygen_icon_new" href="images/oxygen_icon_new.png"/>) and
+                    browse for the file
+                        <codeph>org.dita-semia.resolver/java/oxygen/DitaSemiaOxygen.jar</codeph>.</cmd>
             </step>
             <step>
-                <cmd>Add
-                        <codeph>dita-ot/plugins/org.dita-semia.resolver/schema/xslt-conref/xslt-conref.sch</codeph>
-                    to the validation scenario.</cmd>
+                <cmd>In the tab <menucascade>
+                        <uicontrol>Author</uicontrol>
+                        <uicontrol>CSS</uicontrol>
+                    </menucascade>, click <uicontrol>New</uicontrol> and browse for the file
+                        <codeph>org.dita-semia.resolver/oxygen-framework/css/xslt-conref.less</codeph>.</cmd>
+            </step>
+            <step>
+                <cmd>In the tab <uicontrol>Extensions</uicontrol>, set the <uicontrol>Extensions
+                        bundle</uicontrol> to
+                        <codeph>org.DitaSemia.Oxygen.DitaSemiaExtensionBundle</codeph> or to
+                        <codeph>org.DitaSemia.Oxygen.DitaSemiaMapExtensionBundle</codeph> for the
+                    DITA Map-SEMIA document type.</cmd>
+            </step>
+            <step>
+                <cmd>Set the validation scenario:</cmd>
+                <substeps id="substeps_myv_dgx_gv">
+                    <substep>
+                        <cmd>In the tab <uicontrol>Validation</uicontrol>, click
+                                <uicontrol>New</uicontrol>.</cmd>
+                        <stepresult>The dialog <uicontrol>New scenario</uicontrol>
+                            opens.</stepresult>
+                    </substep>
+                    <substep>
+                        <cmd>Click <uicontrol>Add</uicontrol>.</cmd>
+                        <stepresult>A new scenario is created in the table.</stepresult>
+                    </substep>
+                    <substep>
+                        <cmd>Double-click the cell in the column <uicontrol>URL of the file to
+                                validate </uicontrol>and browse for the file
+                                <codeph>org.dita-semia.resolver/schema/xslt-conref/xslt-conref.sch</codeph>
+                            in your DITA-OT plug-ins subdirectory.</cmd>
+                    </substep>
+                </substeps>
+            </step>
+            <step id="add_lib_to_trafo">
+                <cmd>In the tab <uicontrol>Transformation</uicontrol>, add the DITA-SEMIA library to
+                        <i>all</i> DITA-OT transformation scenarios:</cmd>
+                <substeps id="substeps_y5n_1gg_cv">
+                    <substep>
+                        <cmd>Double-click a scenario.</cmd>
+                        <stepresult>The dialog <uicontrol>Edit DITA Scenario</uicontrol>
+                            opens.</stepresult>
+                    </substep>
+                    <substep>
+                        <cmd>In the tab <uicontrol>Advanced</uicontrol>, click
+                                <uicontrol>Libraries</uicontrol>.</cmd>
+                        <stepresult>The dialog <uicontrol>Libraries</uicontrol> opens.</stepresult>
+                    </substep>
+                    <substep>
+                        <cmd>Click <uicontrol>Add</uicontrol> and browse for the file
+                                <codeph>org.dita-semia.resolver/java/ot/DitaSemiaOt.jar</codeph>.</cmd>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd>Close the dialog <uicontrol>Document type</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>In <menucascade>
+                        <uicontrol>Preferences</uicontrol>
+                        <uicontrol>DITA</uicontrol>
+                    </menucascade>, select the custom DITA Open Toolkit and set
+                        <uicontrol>Location</uicontrol> to the DITA-OT folder of your custom
+                    framework.</cmd>
             </step>
         </steps>
     </taskbody>

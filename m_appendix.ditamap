@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+ <title>Appendix - Reference</title>
+ <topicref href="r_features.dita">
+  <topicref href="r_xslt_conref.dita"/>
+  <topicref href="r_xslt_gui.dita"/>
+  <topicref href="r_conbat.dita"/>
+ </topicref>
+</map>

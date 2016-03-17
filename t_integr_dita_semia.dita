@@ -5,7 +5,8 @@
     <shortdesc/>
     <taskbody>
         <context>
-            <p/>
+            <p>DITA-SEMIA provides two oXygen frameworks: one for topics and one for maps. These
+                frameworks are extensions of oXygen's standard DITA frameworks.</p>
         </context>
         <steps>
             <step>
