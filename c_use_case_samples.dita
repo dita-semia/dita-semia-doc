@@ -4,6 +4,7 @@
  <title>Use case samples</title>
  <shortdesc/>
  <conbody>
-  <p/>
+  <p>The use case samples are stored in the folder
+   <codeph>org.dita-semia.resolver/samples</codeph>.</p>
  </conbody>
 </concept>

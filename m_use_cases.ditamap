@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+ <title>Use cases</title>
+ <topicref href="c_use_case_samples.dita">
+  <topicref href="c_xslt_conref_use_cases.dita">
+   <topicref href="t_use_case_csv_to_table.dita"/>
+   <topicref href="t_use_case_xml_xls_to_table.dita"/>
+   <topicref href="t_use_case_dyn_content_svg.dita"/>
+   <topicref href="t_use_case_gen_loc_toc.dita"/>
+   <topicref href="t_use_case_gen_section_overview.dita"/>
+   <topicref href="t_use_case_gen_sequence_diag.dita"/>
+  </topicref>
+  <topicref href="c_xslt_gui_use_cases.dita"/>
+  <topicref href="c_conbat_use_cases.dita"/>
+ </topicref>
+</map>

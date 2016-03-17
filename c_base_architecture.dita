@@ -4,6 +4,24 @@
  <title>Base architecture</title>
  <shortdesc/>
  <conbody>
-  <p/>
+  <p>DITA-SEMIA provides the following functionalities:</p>
+  <dl>
+   <dlentry>
+    <dt>XSLT-Conref</dt>
+    <dd>XSLT-Conref combines the <codeph>conref</codeph> attribute of DITA with an XSL
+     transformation. It allows you to reuse DITA content, to import structured external data, and to
+     generate dynamic textual and graphical content.</dd>
+   </dlentry>
+   <dlentry>
+    <dt>XSLT-GUI</dt>
+    <dd>XSLT-GUI provides a graphical user interface within your XSLT script.</dd>
+   </dlentry>
+   <dlentry>
+    <dt>Conbat</dt>
+    <dd>Conbat sets attribute default values to generate content that is defined in a schema. With
+     Conbat, you can display properly specialized elements without adding a specific CSS or
+     XSLT.</dd>
+   </dlentry>
+  </dl>
  </conbody>
 </concept>

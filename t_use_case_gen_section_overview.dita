@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_klw_4vv_fv">
+    <title>Generating a section overview</title>
+    <shortdesc/>
+    <taskbody>
+        <context>
+            <p>You can generate a list of sections in your topic by using an XSLT script within
+                XSLT-Conref.</p>
+            <p>The specialized element <codeph>section-overview</codeph> is based on the XSLT script
+                    <codeph>xsl:for-each</codeph>. It itemizes cross references of all sections that
+                have a title and an <codeph>id</codeph> attribute.</p>
+            <p>If sections are created or deleted, the changes are displayed immediately after
+                clicking the refresh button. You do not have to save the file first. If you change
+                the title of an existing section, you must save your changes, close, and reopen the
+                file to update the section overview.</p>
+        </context>
+        <steps>
+            <step>
+                <cmd></cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

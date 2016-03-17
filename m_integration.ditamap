@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+ <title>Integration</title>
+ <topicref href="t_integr_dita_semia.dita">
+  <topicref href="t_integr_dita_ot.dita"/>
+  <topicref href="t_integr_oxygen_framework.dita"/>
+  <topicref href="t_integr_separate_framework.dita"/>
+ </topicref>
+</map>

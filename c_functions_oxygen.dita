@@ -4,6 +4,25 @@
  <title>Functions in oXygen XML Editor</title>
  <shortdesc/>
  <conbody>
-  <p/>
- </conbody>
+    <p>DITA-SEMIA provides some functions for oXygen to facilitate your work. </p>
+    <p>In oXygen's Author Mode, the following buttons are displayed above the content that is
+      generated with XSLT-Conref:<ul id="ul_ikp_2sk_cv">
+        <li>
+          <p>The button <uicontrol>Refresh the XSLT-Conref</uicontrol> refreshes the display of
+            reused or imported data when the source content changed.</p>
+        </li>
+        <li>
+          <p>The button <uicontrol>Open XSLT-Conref XSL Script file</uicontrol> opens the XSL script
+            file.</p>
+        </li>
+        <li>
+          <p>The button <uicontrol>Open XSLT-Conref XML Source file</uicontrol> opens the XML source
+            file.</p>
+        </li>
+        <li>
+          <p>The button <uicontrol>Click to open:</uicontrol> opens a file that is defined by the
+            user.</p>
+        </li>
+      </ul></p>
+  </conbody>
 </concept>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_urd_hdk_2v">
+    <title>Importing Excel data to a table</title>
+    <shortdesc/>
+    <taskbody>
+        <context>
+            <p>XSLT-Conref allows you to import Excel data to DITA files. Excel supports an XML
+                format that stores data and formatting information. The Excel XML data is included
+                with the <codeph>xcr:source</codeph> attribute. The script
+                    <codeph>import-excel-xml-to-table.xsl</codeph> inserts the Excel XML data into a
+                DITA <codeph>simpletable</codeph>. </p>
+            <p>The first row of the Excel table is interpreted as table header. The number of
+                    <codeph>simpletable</codeph> columns corresponds to the number of entries in the
+                first row of the Excel table. In the XSLT script, the attribute
+                    <codeph>xml:space</codeph> is set to &quot;preserve&quot; to enable line breaks
+                within a table cell of the <codeph>simpletable</codeph>.</p>
+        </context>
+        <steps>
+            <step>
+                <cmd></cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>
