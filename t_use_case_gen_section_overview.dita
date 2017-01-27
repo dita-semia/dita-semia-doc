@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_klw_4vv_fv">
+    <title>Generating a Section Overview</title>
+    <shortdesc>You can generate an overview of the sections in your DITA topic by using an XSLT
+        script within <keyword keyref="ComponentConref"></keyword>. The XSLT script <filepath>sequence-diagram.xsl</filepath> defines the
+        specialized element <codeph>section-overview</codeph>. It itemizes cross references of all
+        sections that have a title and an <codeph>id</codeph> attribute.</shortdesc>
+    <taskbody>
+        <prereq>
+            <ul id="ul_uvd_xwx_gv">
+                <li>
+                    <p>Your DITA topic contains several sections that have a title and an
+                            <codeph>id</codeph> attribute, for example:<fig id="fig_vjb_nlf_mv">
+                            <image id="section_overview_pre" href="images/section_overview_pre.png"
+                            />
+                        </fig></p>
+                </li>
+                <li>
+                    <p>You adjusted your DITA topic as described in <xref
+                            href="c_xslt_conref_use_cases.dita"/>. The specialized element
+                            <codeph>section-overview</codeph> requires the following XML processing
+                        instruction
+                        declarations:<codeblock>&lt;?xml-model href="topic-with-section-overview.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+&lt;?xml-model href="topic-with-section-overview.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?></codeblock></p>
+                </li>
+            </ul>
+        </prereq>
+        <context>
+            <p>To generate an overview of the sections in your DITA topic, complete the following
+                step:</p>
+        </context>
+        <steps>
+            <step>
+                <cmd>Insert <codeph>&lt;section-overview/></codeph> at the position in your topic
+                    body where you want the list of sections to appear.</cmd>
+            </step>
+        </steps>
+        <result>
+            <p>Cross references to all sections with a title and an <codeph>id</codeph> attribute
+                are listed in <codeph>sli</codeph> elements. A preview is automatically displayed in
+                Author mode:<fig id="fig_xzw_34f_mv">
+                    <image id="section_overview_pos" href="images/section_overview_post.png"/>
+                </fig></p>
+        </result>
+        <postreq>
+            <draft-comment author="TiMe">The following information could be shifted to another
+                topic.</draft-comment>
+            <p>If you create or delete sections, the changes are displayed immediately after
+                clicking the refresh button. If you change the title of an existing section, you
+                must save the file and press <uicontrol>F5</uicontrol> to update the overview of
+                sections.</p>
+        </postreq>
+    </taskbody>
+</task>

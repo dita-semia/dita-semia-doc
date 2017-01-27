@@ -2,8 +2,30 @@
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
 <concept id="c_intro">
  <title>Introduction</title>
- <shortdesc/>
  <conbody>
-  <p/>
- </conbody>
+    <p><keyword keyref="ProductName"/> is a set of open-source tools that support technical writers
+      and information architects working with and creating specialized semantic DITA frameworks.</p>
+    <p>The plug-ins that come with <keyword keyref="ProductName"/> integrate well with <keyword
+        keyref="EditorName"/> and the DITA Open Toolkit (DITA-OT) to support authoring and
+      publishing.</p>
+    <p><keyword keyref="ProductName"/> offers a strong author guidance as well as automated
+      consistency and plausibility checks. <keyword keyref="ProductName"/> can help you and your
+      authors with the following tasks:</p>
+    <ul id="ul_kqc_wlb_ry">
+      <li>
+        <p>Integrating external structured data into DITA files</p>
+      </li>
+      <li>
+        <p>Extracting DITA content to structured data files</p>
+      </li>
+      <li>
+        <p>Automating the generation of texts (DITA to DITA) and figures (DITA to SVG)</p>
+      </li>
+      <li>
+        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>
+        <p>...</p>
+        <?oxy_custom_end?>
+      </li>
+    </ul>
+  </conbody>
 </concept>

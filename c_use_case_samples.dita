@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
 <concept id="c_use_case_samp">
- <title>Use case samples</title>
- <shortdesc/>
- <conbody>
-  <p/>
- </conbody>
+  <title>Sample Use Cases</title>
+  <conbody>
+    <p><keyword keyref="ProductName"/> comes with a set of sample use cases that help you understand
+      the <keyword keyref="ProductName"/> features. The sample use cases are stored in the folder
+        <filepath>org.dita-semia.resolver/samples</filepath>.</p>
+  </conbody>
 </concept>

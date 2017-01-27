@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="gen_loc_toc">
+    <title>Generating a Local Table of Contents</title>
+    <shortdesc>If a reference topic contains several sub-topics, <keyword keyref="ComponentConref"></keyword> allows you to generate
+        an overview of these sub-topics that is similar to an extended local table of contents in
+        the parent topic. The attribute <codeph>xcr:xsl</codeph> is inserted in a
+        <codeph>ul</codeph> element and the XSLT script <filepath>local-toc.xsl</filepath> provides
+        the required content.</shortdesc>
+    <taskbody>
+        <prereq>
+            <ul id="ul_uvd_xwx_gv">
+                <li>
+                    <p>Your DITA reference topic contains several sub-topics, for example:<fig
+                            id="fig_vjb_nlf_mv">
+                            <image id="local_toc_pre" href="images/local_toc_pre.png"/>
+                        </fig></p>
+                </li>
+                <li>
+                    <p>You adjusted your parent DITA reference topic as described in <xref
+                            href="c_xslt_conref_use_cases.dita"/>.</p>
+                </li>
+            </ul>
+        </prereq>
+        <context>
+            <p>To generate an overview of sub-topics, complete the following steps:</p>
+        </context>
+        <steps>
+            <step>
+                <cmd>Insert a <codeph>ul</codeph> element in a section at the position in your
+                    parent topic&apos;s body where you want the overview of sub-topics to
+                    appear.</cmd>
+            </step>
+            <step>
+                <cmd>Set the attribute value <codeph>xcr:xsl="local-toc.xsl"</codeph> on the
+                        <codeph>ul</codeph> element.</cmd>
+            </step>
+        </steps>
+        <result>
+            <p>The overview of sub-topics is automatically displayed in Author mode. It shows the
+                title, the short description, and a cross reference to each sub-topic in an itemized
+                    list:<fig id="fig_xzw_34f_mv">
+                    <image id="local_toc_post" href="images/local_toc_post.png"/>
+                </fig></p>
+        </result>
+        <postreq>
+            <draft-comment author="TiMe">The following information could be shifted to another
+                topic.</draft-comment>
+            <p>If you create or delete sub-topics, the changes are displayed immediately after
+                clicking the refresh button. If you change the title of an existing sub-topic, you
+                must save the file and press <uicontrol>F5</uicontrol> to update the local table of
+                contents.</p>
+            <p>If you want to generate an overview of sub-topics in the generic topic type, you must
+                adapt the XSLT script <filepath>local-toc.xsl</filepath>. In the element
+                    <codeph>xsl:for-each</codeph>, replace the attribute value
+                    <codeph>select="*/reference"</codeph> by <codeph>select="*/topic"</codeph>.</p>
+        </postreq>
+    </taskbody>
+</task>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+ <title>Functions</title>
+ <topicref href="c_functionality_architecture.dita">
+  <?oxy_insert_start author="MaKe" timestamp="20161213T175443+0100"?>
+  <topicref href="c_use_cases.dita"/>
+  <?oxy_insert_end?>
+  <topicref href="c_base_architecture.dita"/>
+  <topicref href="c_dita-ot_plug-ins.dita"/>
+  <topicref href="c_functions_oxygen.dita"/>
+  <topicref href="c_xslt_conref.dita">
+   <topicref href="c_class_attributes_xslt_conref.dita"/>
+  </topicref>
+ </topicref>
+</map>

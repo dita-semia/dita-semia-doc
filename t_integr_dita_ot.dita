@@ -19,14 +19,14 @@
             </step>
             <step>
                 <cmd>Copy the plugins <codeph>dita-semia-master\org.dita-semia.resolver</codeph> and
-                        <codeph>dita-semia-master\org.dita-semia.pdf</codeph> into the DITA-OT
+                    <codeph>dita-semia-master\org.dita-semia.pdf</codeph> into the DITA-OT
                     plugins subdirectory <codeph>Oxygen XML Editor
                         17\frameworks\dita\DITA-OT\plugins</codeph>.</cmd>
             </step>
             <step>
                 <cmd>Integrate the plugins in DITA-OT by executing the procedure described on <xref
-                        href="http://www.dita-ot.org/dev/dev_ref/plugins-installing.html"
-                        format="html" scope="external"/>.</cmd>
+                    href="http://www.dita-ot.org/dev/dev_ref/plugins-installing.html"
+                    format="html" scope="external"/>.</cmd>
             </step>
         </steps>
     </taskbody>

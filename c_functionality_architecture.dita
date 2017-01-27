@@ -1,9 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
 <concept id="c_func_arch">
- <title>Functionality and architecture</title>
- <shortdesc/>
+ <title>Functionality and Architecture</title>
  <conbody>
-  <p/>
+  <p><keyword keyref="ProductName"/> offers the following features:</p>
+  <dl>
+   <dlentry>
+    <dt><keyword keyref="ComponentConref"/> (XSLT Content Reference)</dt>
+    <dd><keyword keyref="ComponentConref"/> combines the <codeph>@conref</codeph> attribute of DITA
+     with an XSL transformation. It allows you to reuse DITA content, to import structured external
+     data, and to generate dynamic textual and graphical content.</dd>
+    <dd>For more information, see <xref href="c_xslt_conref.dita#c_xslt_conref"/>.</dd>
+   </dlentry>
+   <dlentry>
+    <dt><keyword keyref="ComponentGUI"/></dt>
+    <dd><keyword keyref="ComponentGUI"/> provides a graphical user interface within your XSLT script
+     that allows you to create message dialogs and option dialogs.</dd>
+   </dlentry>
+   <dlentry>
+    <dt><keyword keyref="ComponentConbat"/> (Content By Attributes)</dt>
+    <dd><keyword keyref="ComponentConbat"/> generates content that is defined in a schema by setting
+     specific attribute default values. That way, you can properly display specialized elements
+     without adding specific CSS or XSLT code.</dd>
+   </dlentry>
+   <dlentry>
+    <dt><keyword keyref="ComponentAdvancedKeyref"/></dt>
+    <dd><keyword keyref="ComponentAdvancedKeyref"/> comes with two functionalities that facilitate
+     working with keys: <keyword keyref="ComponentAdvancedKeyref"/> allows you to implicitly define
+     keys within your topic content, and it provides a new referencing mechanisms to easily handle a
+     large amount of keys.</dd>
+   </dlentry>
+  </dl>
  </conbody>
 </concept>

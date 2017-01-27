@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_jwh_bh4_pv">
+    <title>Generating a Parameterized Local Table of Contents</title>
+    <shortdesc>The XSLT script <filepath>local-toc-parameterized.xsl</filepath> is a further development
+        of the script <filepath>local-toc-specialized.xsl</filepath>. It defines parameters for
+        customizing your local table of contents. The script detects whether an overview of
+        sub-topics is unnecessary, that is, if the topic contains only one or no
+        sub-topic.</shortdesc>
+    <taskbody>
+        <prereq>
+            <ul id="ul_uvd_xwx_gv">
+                <li>
+                    <p>Your DITA reference topic contains one or more levels of sub-topics, for
+                            example:<fig id="fig_vjb_nlf_mv">
+                            <image id="local_toc_param_pre" href="images/local_toc_param_pre.png"/>
+                        </fig></p>
+                </li>
+                <li>
+                    <p>You adjusted your parent DITA reference topic as described in <xref
+                            href="c_xslt_conref_use_cases.dita"/>. The specialized element
+                            <codeph>local-toc</codeph> requires the following XML processing
+                        instruction
+                        declarations:<codeblock>&lt;?xml-model href="urn:dita-semia:xslt-conref:rng:local-toc-parameterized:reference-with-local-toc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+&lt;?xml-model href="urn:dita-semia:xslt-conref:rng:local-toc-parameterized:reference-with-local-toc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?></codeblock></p>
+                </li>
+            </ul>
+        </prereq>
+        <context>
+            <p>To generate customized overviews of sub-topics, complete the following steps:</p>
+        </context>
+        <steps id="steps_fnn_4h4_pv">
+            <step>
+                <cmd>Insert a <codeph>local-toc</codeph> element in the body of each topic for which
+                    you want to generate a local table of contents.</cmd>
+            </step>
+            <step>
+                <cmd>Use the following attributes on the <codeph>local-toc</codeph> element to
+                    customize your local table of contents:</cmd>
+                <itemgroup>
+                    <ul id="ul_xkj_wwc_sv">
+                        <li>
+                            <p>To add an introductory paragraph above the overview, set your desired
+                                introduction as attribute value of
+                                <codeph>xcp:introduction</codeph>, for example, "Contents of
+                                this reference:". The default value is "This reference
+                                contains:".</p>
+                        </li>
+                        <li>
+                            <p>Set <codeph>xcp:useLiTitle</codeph> to "yes" to display the
+                                sub-topic&apos;s titles in bold characters; set it to "no"
+                                to display the titles in normal characters.</p>
+                        </li>
+                        <li>
+                            <p>Set <codeph>xcp:showShortdesc</codeph> to "yes" or
+                                "no" to display or hide the short descriptions.</p>
+                        </li>
+                        <li>
+                            <p>Insert the text string that shall precede the cross references to the
+                                sub-topics as attribute value of <codeph>xcp:xrefPrefix</codeph>,
+                                for example, "For more information see ". The default
+                                value is "(Details: ".</p>
+                        </li>
+                        <li>
+                            <p>Insert the text string that shall follow the cross references to the
+                                sub-topics as attribute value of <codeph>xcp:xrefSuffix</codeph>,
+                                for example, ". ". The default value is ")
+                                ".</p>
+                        </li>
+                        <li>
+                            <p>Insert a title for the local table of contents as attribute value of
+                                    <codeph>xcp:sectionTitle</codeph>, for example, "Overview
+                                of topics". The default value is "Overview".</p>
+                        </li>
+                    </ul>
+                </itemgroup>
+            </step>
+        </steps>
+        <result>
+            <p>The overviews of sub-topics are automatically displayed in Author mode.</p>
+            <p>With the attribute values set to <codeph>xcp:introduction="This reference
+                    contains:" xcp:useLiTitle="yes" xcp:showShortdesc="yes"
+                    xcp:xrefPrefix="For more information see " xcp:xrefSuffix=".
+                    " xcp:sectionTitle="Overview of topics"</codeph> on the
+                    <codeph>local-toc</codeph> element, the local table of contents in the parent
+                topic looks like this:<fig id="fig_xzw_34f_mv">
+                    <image id="local_toc_spec_param1" href="images/local_toc_param_post1.png"/>
+                </fig></p>
+            <p>Because the second child topic only contains one sub-topic, the script
+                    <codeph>local-toc-parameterized.xsl</codeph> does not generate a local table of
+                contents. Instead, it generates a note that is displayed in Author mode, but will be
+                suppressed in the output:<fig id="fig_ugl_fzb_sv">
+                    <image href="images/local_toc_param_post2.png" id="local_toc_param_post2"/>
+                </fig></p>
+        </result>
+    </taskbody>
+</task>

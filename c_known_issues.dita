@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="c_known_issues">
+ <title>Known Issues</title>
+ <conbody>
+  <table frame="all" rowsep="1" colsep="1" id="table_jxf_fps_sy">
+   <title>Known Issues for <keyword keyref="ProductName"/></title>
+   <tgroup cols="2">
+    <colspec colname="c1" colnum="1" colwidth="1.0*"/>
+    <colspec colname="c2" colnum="2" colwidth="1.0*"/>
+    <thead>
+     <row>
+      <entry>
+       <p>Issue</p>
+      </entry>
+      <entry>
+       <p>Solution</p>
+      </entry>
+     </row>
+    </thead>
+    <tbody>
+     <row>
+      <entry>
+       <p><?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>Bug regarding
+         <codeph>id</codeph> attributes in SVG's<?oxy_custom_end?></p>
+      </entry>
+      <entry>
+       <p>In the original transformation file
+         <filepath>[OXYGEN_DIRECTORY]/frameworks/dita/DITA-OT/plugins/org.dita.pdf2/xsl/common/topicmergeImpl.xsl</filepath>,
+        add the following template:</p>
+       <codeblock outputclass="language-xml">&lt;xsl:template match="*[contains(@class, ' topic/foreign ')]//node()" mode="#all">
+        &lt;xsl:sequence select="."/>
+        &lt;/xsl:template></codeblock>
+      </entry>
+     </row>
+    </tbody>
+   </tgroup>
+  </table>
+ </conbody>
+</concept>

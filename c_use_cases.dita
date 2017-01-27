@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="c_use_cases">
+ <title>Sample Use Cases</title>
+ <conbody>
+    <p>The following examples illustrate use cases for DITA-SEMIA: <ul>
+        <li>Integrating external data: <ol>
+            <li> The system architect describes a software component in DITA.</li>
+            <li> A software developer maintains a list of configuration parameters in Excel.</li>
+            <li>The framework embeds the configuration parameters from the Excel sheet in the DITA
+              document.</li>
+          </ol></li>
+        <li>Specifying a GUI:<ol>
+            <li> The author selects UI elements and their properties from a drop-down list.</li>
+            <li> The framework checks if the UI elements are compliant with the general guidelines
+              for the UI concept.</li>
+            <li>The framework generates an embedded figure of the client mask.</li>
+          </ol></li>
+        <li>Defining and referencing specialized key elements:<ol>
+            <li> The author describes an enumeration type and its values with a specialized key in a
+              DITA topic.</li>
+            <li> The author references one of the enumeration values in another DITA topic with a
+              specialized key reference element.</li>
+            <li> A dialog displays a list of all known keys. The author can filter the list.</li>
+            <li> The framework inserts a key reference and displays the name of the value in author
+              mode.</li>
+            <li>The framework provides a link to the definition in author mode.</li>
+          </ol></li>
+        <li>Extracting an XML schema:<ol>
+            <li> The author describes the interface of a web service in a specialized DITA
+              table.</li>
+            <li> A transformation scenario generates an XSD file.</li>
+          </ol></li>
+      </ul></p>
+  </conbody>
+</concept>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_xrq_fxx_zv">
+    <title>Integrating Dynamic Type Information</title>
+    <shortdesc>If an interface description in tabular form contains fields whose types are globally
+        defined elsewhere, you can integrate the global field type information with <keyword keyref="ComponentConref"></keyword> to
+        facilitate the user's work. The XSLT script <filepath>dynamic-type-information.xsl</filepath>
+        scans the global field definition for the specified field name and returns the type
+        information.</shortdesc>
+    <taskbody>
+        <prereq>
+            <ul id="ul_uvd_xwx_gv">
+                <li>
+                    <p>Your interface description is organized in a <codeph>table</codeph> element
+                        in a reference topic. The description contains fields that are globally defined, for
+                            example:<fig id="fig_dnv_sgm_1w">
+                            <image href="images/dyn_type_info_pre1.png" id="dyn_type_info_pre1"/>
+                        </fig></p>
+                </li>
+                <li>
+                    <p>Your global field definitions are organized in a <codeph>table</codeph>
+                        element in a child of the reference topic the interface description is
+                        placed in, for example: <fig id="fig_nfj_yzl_1w">
+                            <image id="dyn_type_info_pre2" href="images/dyn_type_info_pre2.png"/>
+                        </fig></p>
+                </li>
+                <li>
+                    <p>You adjusted your DITA reference topic as described in <xref
+                            href="c_xslt_conref_use_cases.dita"/>. The specialized element
+                            <codeph>type-info</codeph> requires the following XML processing
+                        instruction
+                        declarations:<codeblock>&lt;?xml-model href="reference-with-type-info.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+&lt;?xml-model href="reference-with-type-info.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?></codeblock></p>
+                </li>
+            </ul>
+        </prereq>
+        <context>
+            <p>To integrate field type information in your interface description, complete the
+                following step:</p>
+        </context>
+        <steps>
+            <step>
+                <cmd>On the <codeph>reference</codeph> element of the child topic, set the attribute
+                    value <codeph>id="global-field-definitions"</codeph>.</cmd>
+            </step>
+            <step>
+                <cmd>In your interface description, insert a <codeph>type-info</codeph> element in
+                    each <codeph>entry</codeph> element of the <uicontrol>Description</uicontrol>
+                    column for which you want to integrate field type information.</cmd>
+            </step>
+        </steps>
+        <result>
+            <p>The global field type information are inserted in your interface description. If the
+                first node inside the <codeph>entry</codeph> element of the global definition is a
+                    <codeph>p</codeph> element, the text string "Type:" is placed before
+                the field type information:<fig id="fig_azf_fbm_1w">
+                    <image id="dyn_type_info_post" href="images/dyn_type_info_post.png"/>
+                </fig></p>
+            <p>If a field is not globally defined, the script
+                <filepath>dynamic-type-information.xsl</filepath> generates a note that will be
+                suppressed in the output.</p>
+        </result>
+    </taskbody>
+</task>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="add_attr_rng">
+    <title>Using Constants</title>
+    <shortdesc>Instead of typing in attributes or sets of attributes explicitly, you can define
+        constants for these attributes to rationalize work and avoid typing errors. The XSLT script
+        <filepath>class.xsl</filepath> provides definitions of <codeph>@class</codeph> attributes
+        for the most common DITA elements.</shortdesc>
+    <taskbody>
+        <prereq>
+            <ul id="ul_ick_q2m_hw">
+                <li>
+                    <p>Your XSLT script generates new XML nodes, for
+                        example:<codeblock>&lt;xsl:template match="/">
+  &lt;section>
+    &lt;title>Adding default attributes by using constants&lt;/title>
+    &lt;p>You can use the constants defined in the file class.xsl to add a class attribute 
+       to a DITA element.&lt;/p>
+    &lt;p>Furthermore, you can define a constant for an attribute and its value ...&lt;/p>
+    &lt;p>... or even a set of attributes, for example, &lt;xref>in HTML references&lt;/xref>.&lt;/p>
+    &lt;ThisIsACustomPElement>Note that with this approach, the actual name of your 
+      elements usually is irrelevant.&lt;/ThisIsACustomPElement>
+    &lt;/section>
+&lt;/xsl:template></codeblock></p>
+                </li>
+                <li>
+                    <p
+                        conref="reusable_content/p_prereq_adjust_topic.dita#ReusableComponent_pt1_yrq_nw/p_qt1_yrq_nw"
+                    />
+                </li>
+                <li>
+                    <p>Your DITA topic includes the new XML nodes with an <keyword keyref="ComponentConref"></keyword>, for
+                        example:<codeblock>&lt;body>
+  &lt;section xcr:xsl="constants.xsl"/>
+&lt;/body></codeblock></p>
+                    <p>
+                        <note
+                            conref="reusable_content/note_xslt-conref_not_expanded_missing_class.dita#ReusableComponent_x5j_rqq_nw/conref_not_expanded"/>
+                    </p>
+                </li>
+            </ul>
+        </prereq>
+        <context>
+            <p>To add the missing attributes by using constants, complete the following steps:</p>
+        </context>
+        <steps id="steps_jck_q2m_hw">
+            <step>
+                <cmd>In your XSLT script, include the XSL file <filepath>class.xsl</filepath> with
+                        <codeph>&lt;xsl:include
+                        href="urn:dita-semia:xslt-conref:xsl:class.xsl"/></codeph>.</cmd>
+            </step>
+            <step>
+                <cmd>In the XSLT script, add attributes to the newly generated XML nodes:</cmd>
+                <choices id="choices_u1s_mmf_mw">
+                    <choice>
+                        <p>Directly insert the constants for <codeph>@class</codeph> attributes
+                            predefined in <filepath>class.xsl</filepath>, for example:</p>
+                        <codeblock>&lt;xsl:template match="/">
+    
+    &lt;section class="{$CP_SECTION}">
+      &lt;title class="{$CP_TITLE}">Adding default attributes by using constants
+        &lt;/title>
+      &lt;p class="{$CP_P}">You can use the constants defined in the file 
+        class.xsl to add a class attribute to a DITA element.&lt;/p>
+      ...
+    &lt;/section>
+    
+&lt;/xsl:template></codeblock>
+                    </choice>
+                    <choice>
+                        <p>Create an attribute definition and include it in the appropriate DITA
+                            element, for example:</p>
+                        <codeblock>&lt;xsl:variable name="ATTR_P" as="attribute()">
+    &lt;xsl:attribute name="class" select="$CP_P"/>
+&lt;/xsl:variable>
+
+&lt;xsl:template match="/">
+    &lt;section class="{$CP_SECTION}">
+      ...
+      &lt;p>
+        &lt;xsl:copy-of select="$ATTR_P"/>Furthermore, you can define a constant
+          for an attribute and its value ...  
+      &lt;/p>
+      ...
+    &lt;/section>  
+&lt;/xsl:template></codeblock>
+                    </choice>
+                    <choice>
+                        <p>Create a definition for a set of attributes and include it in the
+                            appropriate DITA element, for example:</p>
+                        <codeblock>&lt;xsl:variable name="ATTR_HTML_XREF" as="attribute()+">
+    &lt;xsl:attribute name="class" 	select="$CP_XREF"/>
+    &lt;xsl:attribute name="format"	select="'html'"/>
+    &lt;xsl:attribute name="scope" 	select="'external'"/>
+&lt;/xsl:variable>
+
+&lt;xsl:template match="/">
+    
+    &lt;section class="{$CP_SECTION}">
+      ...
+      &lt;p class="{$CP_P}">... or even a set of attributes, for example, in 
+        HTML references:
+        &lt;xref>
+          &lt;xsl:copy-of select="$ATTR_HTML_XREF"/>
+          &lt;xsl:attribute name="href" select="'www.dita-semia.org'"/>
+        &lt;/xref>
+      &lt;/p>
+      ...
+    &lt;/section>
+    
+&lt;/xsl:template></codeblock>
+                    </choice>
+                </choices>
+            </step>
+        </steps>
+        <result>
+            <p>The <keyword keyref="ComponentConref"/> in your DITA topic is resolved and displayed
+                in Author mode:<fig id="fig_ek4_st5_hw">
+                    <image id="add_default_attr_post.png"
+                        href="images/add_default_attr_post_constants.png"/>
+                </fig></p>
+            <note>The actual name of your elements usually is irrelevant when using these
+                approaches. For example, the custom element <codeph>ThisIsACustomPElement</codeph>
+                is treated as <codeph>p</codeph> element if it is assigned the attribute value
+                    <codeph>class="{$CP_P}"</codeph>.</note>
+        </result>
+    </taskbody>
+</task>

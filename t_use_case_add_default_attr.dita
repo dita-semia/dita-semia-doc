@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_z12_gbb_gw">
+    <title>Adding Default Attributes</title>
+    <shortdesc>For resolving an <keyword keyref="ComponentConref"></keyword>, the default attributes must be expanded, especially the
+            <codeph>@class</codeph> attribute. If an XSLT script generates new XML nodes, these
+        attributes are not assigned automatically and the <keyword keyref="ComponentConref"></keyword> will not be resolved. The
+        following use cases demonstrate different ways to add the default attributes.</shortdesc>
+</task>

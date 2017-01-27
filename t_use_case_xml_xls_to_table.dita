@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_urd_hdk_2v">
+    <title>Importing Excel Data to a Table</title>
+    <shortdesc><keyword keyref="ComponentConref"></keyword> allows you to import Excel data to DITA files. Excel supports an XML
+        format that stores data and formatting information. The Excel XML data is included with the
+            <codeph>xcr:source</codeph> attribute. The XSLT script
+        <filepath>import-excel-xml-to-table.xsl</filepath> automatically inserts the Excel XML data
+        into a DITA <codeph>simpletable</codeph>.</shortdesc>
+    <taskbody>
+        <prereq>
+            <ul id="ul_uvd_xwx_gv">
+                <li>
+                    <p>You exported the Excel table that you want to include in your DITA topic to
+                        an Excel XML format. For example, the table could look like this in Excel
+                        XML code:
+                        <codeblock>&lt;Table ss:ExpandedColumnCount="3" ss:ExpandedRowCount="3" x:FullColumns="1"
+   x:FullRows="1" ss:DefaultColumnWidth="60" ss:DefaultRowHeight="15">
+   &lt;Row>
+    &lt;Cell>&lt;Data ss:Type="String">Header 1&lt;/Data>&lt;/Cell>
+    &lt;Cell>&lt;Data ss:Type="String">Header 2&lt;/Data>&lt;/Cell>
+    &lt;Cell>&lt;Data ss:Type="String">Header 3&lt;/Data>&lt;/Cell>
+   &lt;/Row>
+   &lt;Row>
+    &lt;Cell>&lt;Data ss:Type="String">Data 1.1&lt;/Data>&lt;/Cell>
+    &lt;Cell>&lt;Data ss:Type="String">Data 1.2&lt;/Data>&lt;/Cell>
+    &lt;Cell>&lt;Data ss:Type="String">Data 1.3&lt;/Data>&lt;/Cell>
+   &lt;/Row>
+   &lt;Row>
+    &lt;Cell>&lt;Data ss:Type="String">Data 2.1&lt;/Data>&lt;/Cell>
+    &lt;Cell>&lt;Data ss:Type="String">Data 2.2&lt;/Data>&lt;/Cell>
+    &lt;Cell>&lt;Data ss:Type="String">Data 2.3&lt;/Data>&lt;/Cell>
+   &lt;/Row>
+  &lt;/Table></codeblock></p>
+                </li>
+                <li>
+                    <p
+                        conref="reusable_content/p_prereq_adjust_topic.dita#ReusableComponent_pt1_yrq_nw/p_qt1_yrq_nw"
+                    />
+                </li>
+            </ul>
+        </prereq>
+        <context>
+            <p>To import the Excel XML data to your DITA topic, complete the following steps:</p>
+        </context>
+        <steps>
+            <step>
+                <cmd>Create a <codeph>simpletable</codeph> element in your DITA topic.</cmd>
+            </step>
+            <step>
+                <cmd>Set the following attribute values on the <codeph>simpletable</codeph>
+                    element:</cmd>
+                <itemgroup>
+                    <ul id="ul_slk_3fy_gv">
+                        <li>
+                            <p><codeph>xcr:xsl="import-excel-xml-to-table.xsl"</codeph></p>
+                        </li>
+                        <li>
+                            <p><codeph>xcr:source="Data.xml"</codeph> for an Excel XML file named
+                                <filepath>Data.xml</filepath></p>
+                        </li>
+                    </ul>
+                </itemgroup>
+            </step>
+            <step>
+                <cmd>Insert <codeph>&lt;strow/></codeph> in the <codeph>simpletable</codeph>
+                    element.</cmd>
+            </step>
+        </steps>
+        <result>
+            <p>A preview of the <codeph>simpletable</codeph> filled with data is automatically
+                displayed in Author mode:<fig id="fig_vc5_c1z_gv">
+                    <image id="xls_xml_to_table_preview" href="images/xls_xml_to_table_preview.png"
+                    />
+                </fig></p>
+        </result>
+        <postreq>
+            <draft-comment author="TiMe">The following information could be shifted to another
+                topic.</draft-comment>
+            <p>The first row of the Excel XML table is interpreted as table header. The number of
+                    <codeph>simpletable</codeph> columns corresponds to the number of entries in the
+                first row of the Excel XML table. In the XSLT script, the attribute
+                    <codeph>xml:space</codeph> is set to "preserve" to enable line breaks
+                within a table cell of the <codeph>simpletable</codeph>.</p>
+        </postreq>
+    </taskbody>
+</task>

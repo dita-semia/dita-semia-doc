@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="gen_loc_toc_spec">
+    <title>Generating a Specialized Local Table of Contents</title>
+    <shortdesc>If a reference topic contains several levels of sub-topics, the specialized element
+            <codeph>local-toc</codeph> allows you to generate a local table of contents in each
+        topic that contains nested topics. The element <codeph>local-toc</codeph> is defined in the
+        XSLT script <filepath>local-toc-specialized.xsl</filepath>.</shortdesc>
+    <taskbody>
+        <prereq>
+            <ul id="ul_uvd_xwx_gv">
+                <li>
+                    <p>Your DITA reference topic contains two or more levels of sub-topics, for
+                            example:<fig id="fig_vjb_nlf_mv">
+                            <image id="local_toc_spec_pre" href="images/local_toc_spec_pre.png"/>
+                        </fig></p>
+                </li>
+                <li>
+                    <p>You adjusted your parent DITA reference topic as described in <xref
+                            href="c_xslt_conref_use_cases.dita"/>. The specialized element
+                            <codeph>local-toc</codeph> requires the following XML processing
+                        instruction
+                        declarations:<codeblock>&lt;?xml-model href="reference-with-local-toc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+&lt;?xml-model href="reference-with-local-toc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?></codeblock></p>
+                </li>
+            </ul>
+        </prereq>
+        <context>
+            <p>To generate overviews of sub-topics, complete the following step:</p>
+        </context>
+        <steps id="steps_fnn_4h4_pv">
+            <step>
+                <cmd>Insert a <codeph>local-toc</codeph> element in a section of each topic for
+                    which you want to generate a local table of contents.</cmd>
+            </step>
+        </steps>
+        <result>
+            <p>The overviews of sub-topics are automatically displayed in Author mode. They show the
+                title, the short description, and a cross reference to each sub-topic in an itemized
+                list.</p>
+            <p>For example, the local table of contents in the parent topic could look like
+                    this:<fig id="fig_xzw_34f_mv">
+                    <image id="local_toc_spec_post1" href="images/local_toc_spec_post1.png"/>
+                </fig></p>
+            <p>The local table of contents in the second child topic could look like this:<fig
+                    id="fig_ugl_fzb_sv">
+                    <image href="images/local_toc_spec_post2.png" id="local_toc_spec_post2"/>
+                </fig></p>
+        </result>
+        <postreq>
+            <draft-comment author="TiMe">The following information could be shifted to another
+                topic.</draft-comment>
+            <p>The script <filepath>local-toc-specialized.xsl</filepath> is context sensitive. Instead
+                of simply listing the first level of sub-topics, the script first identifies the
+                    <codeph>local-toc</codeph> element and then identifies all sub-topics of the
+                topic <codeph>local-toc</codeph> is placed in.</p>
+        </postreq>
+    </taskbody>
+</task>

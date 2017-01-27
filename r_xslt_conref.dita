@@ -1,14 +1,89 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
 <reference id="r_xslt_conref">
-  <title>XSLT-Conref</title>
-  <shortdesc/>
+  <title><keyword keyref="ComponentConref"></keyword> Reference</title>
   <refbody>
     <section>
       <title>Standard parameters</title>
+      <dl>
+        <dlentry>
+          <dt><codeph>@xcr:xsl</codeph></dt>
+          <dd>URI to the XSLT script. Marks an element as <keyword keyref="ComponentConref"/>.</dd>
+        </dlentry>
+        <dlentry>
+          <dt><codeph>@xcr:source</codeph></dt>
+          <dd>URI to the XML source. If not specified, the file containing the <keyword
+              keyref="ComponentConref"/> is used as input.</dd>
+        </dlentry>
+        <dlentry>
+          <dt><codeph>@xcr:start-template</codeph></dt>
+          <dd>Name of the template to be executed in the beginning. If specified, no context item is
+            set.</dd>
+        </dlentry>
+        <dlentry>
+          <dt><codeph>@xcp:introduction</codeph></dt>
+          <dd/>
+        </dlentry>
+        <dlentry>
+          <dt><codeph>@xcp:useLiTitle</codeph></dt>
+          <dd/>
+        </dlentry>
+        <dlentry>
+          <dt><codeph>@xcp:showShortdesc</codeph></dt>
+          <dd/>
+        </dlentry>
+        <dlentry>
+          <dt><codeph>@xcp:xrefPrefix</codeph></dt>
+          <dd/>
+        </dlentry>
+        <dlentry>
+          <dt><codeph>@xcp:xrefSuffix</codeph></dt>
+          <dd/>
+        </dlentry>
+        <dlentry>
+          <dt><codeph>@xcp:sectionTitle</codeph></dt>
+          <dd/>
+        </dlentry>
+      </dl>
+      <!--<p><codeph>@xcr:key</codeph></p><p><codeph>@xcr:copy</codeph></p><p><codeph>@xcr:phase</codeph></p>-->
     </section>
     <section>
       <title>Custom parameters</title>
+      <dl>
+        <dlentry>
+          <dt><codeph>@xcrcp:csvFile</codeph></dt>
+          <dd/>
+        </dlentry>
+        <dlentry>
+          <dt><codeph>@xcrcp:cppFile</codeph></dt>
+          <dd/>
+        </dlentry>
+        <dlentry>
+          <dt><codeph>@xcrcp:maxWidth</codeph></dt>
+          <dd/>
+        </dlentry>
+        <dlentry>
+          <dt><codeph>@xcrcp:entityName</codeph></dt>
+          <dd/>
+        </dlentry>
+      </dl>
+    </section>
+    <section>
+      <title>Specialized Elements</title>
+      <dl>
+        <dlentry>
+          <dt><codeph>local-toc</codeph></dt>
+          <dd/>
+        </dlentry>
+        <dlentry>
+          <dt><codeph>section-overview</codeph></dt>
+          <dd/>
+        </dlentry>
+        <dlentry>
+          <dt><codeph>type-info</codeph></dt>
+          <dd/>
+        </dlentry>
+      </dl>
     </section>
   </refbody>
 </reference>

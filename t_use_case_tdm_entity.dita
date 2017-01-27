@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_lrf_hth_5v">
+    <title>Importing Toad Data Modeler Entities</title>
+    <shortdesc><keyword keyref="ComponentConref"></keyword> allows you to import entities of a database that was modeled with a data
+        modeling tool. The script <filepath>import-tdm-entity.xsl</filepath> inserts the entity
+        descriptions in <codeph>table</codeph> elements.</shortdesc>
+    <taskbody>
+        <prereq>
+            <ul id="ul_uvd_xwx_gv">
+                <li>
+                    <p>Your database was modeled with an external tool, such as Toad Data Modeler.
+                            <draft-comment author="TiMe">Include part of the code
+                            here?</draft-comment></p>
+                </li>
+                <li>
+                    <p>You adjusted your DITA reference topic as described in <xref
+                            href="c_xslt_conref_use_cases.dita"/>.</p>
+                </li>
+            </ul>
+        </prereq>
+        <context>
+            <p>To import entites from a modeled database, complete the following steps:</p>
+        </context>
+        <steps>
+            <step id="child">
+                <cmd>Create a child reference topic with an empty title element.</cmd>
+            </step>
+            <step id="attributes">
+                <cmd>Set the following attribute values on the <codeph>reference</codeph>
+                    element:</cmd>
+                <itemgroup>
+                    <ul id="ul_pxm_kvq_5v">
+                        <li>
+                            <p><codeph>xcr:xsl="import-tdm-entity.xsl"</codeph></p>
+                        </li>
+                        <li>
+                            <p><codeph>xcr:source="datamodel.txp"</codeph> for a modeled
+                                database file named <filepath>datamodel.txp</filepath></p>
+                        </li>
+                        <li>
+                            <p><codeph>xcrcp:entityName="MASTER_TABLE"</codeph> to include
+                                the entity "MASTER_TABLE"</p>
+                        </li>
+                    </ul>
+                </itemgroup>
+            </step>
+            <step>
+                <cmd>Repeat steps <xref type="li" href="#task_lrf_hth_5v/child"/> and <xref
+                        type="li" href="#task_lrf_hth_5v/attributes"/> for each entity that you want
+                    to import.</cmd>
+            </step>
+        </steps>
+        <result>
+            <p>Each entity description is inserted as a separate <codeph>table</codeph> element. The
+                tables include the database column names and descriptions, for example:<fig
+                    id="fig_ynk_pr5_vv">
+                    <image id="tdm_entity_post1" href="images/tdm_entity_post1.png"/>
+                </fig></p>
+            <p>The script <filepath>import-tdm-entity.xsl</filepath> includes additional information
+                about each database column in brackets below the column name:<ul id="ul_ygh_2zw_zv">
+                    <li>
+                        <p>the data type of the column entry</p>
+                    </li>
+                    <li>
+                        <p>"PK-" if the column is a primary key</p>
+                    </li>
+                    <li>
+                        <p>the primary key index if the column is a primary key</p>
+                    </li>
+                    <li>
+                        <p>"NN" (<i>NotNull</i>) if the column does not allow the entry
+                            "0"</p>
+                    </li>
+                </ul></p>
+            <p>If the specified entity name is not found in the modeled database file, a note is
+                generated that will be suppressed in the output:<fig id="fig_drq_thx_zv">
+                    <image id="tdm_entity_post2" href="images/tdm_entity_post2.png"/>
+                </fig></p>
+        </result>  
+    </taskbody>
+</task>

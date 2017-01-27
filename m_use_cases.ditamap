@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+ <title>Sample Use Cases</title>
+ <topicref href="c_use_case_samples.dita">
+  <topicref href="c_xslt_conref_use_cases.dita">
+   <topicref href="t_use_case_add_default_attr.dita">
+    <topicref href="t_use_case_add_default_attr_constants.dita"/>
+    <topicref href="t_use_case_add_default_attr_rng.dita"/>
+   </topicref>
+   <topicref href="t_use_case_csv_to_table.dita"/>
+   <topicref href="t_use_case_xml_xls_to_table.dita"/>
+   <topicref href="t_use_case_xml_to_codeblock.dita"/>
+   <topicref href="t_use_case_gen_loc_toc.dita"/>
+   <topicref href="t_use_case_gen_loc_toc_spec.dita"/>
+   <topicref href="t_use_case_gen_loc_toc_param.dita"/>
+   <topicref href="t_use_case_gen_section_overview.dita"/>
+   <topicref href="t_use_case_dyn_content_svg.dita"/>
+   <topicref href="t_use_case_gen_sequence_diag.dita"/>
+   <topicref href="t_use_case_cpp_enum.dita"/>
+   <topicref href="t_use_case_tdm_entity.dita"/>
+   <topicref href="t_use_case_dyn_type_info.dita"/>
+  </topicref>
+<!--  <topicref href="c_xslt_gui_use_cases.dita"/>-->
+<!--  <topicref href="c_conbat_use_cases.dita"/>-->
+ </topicref>
+</map>

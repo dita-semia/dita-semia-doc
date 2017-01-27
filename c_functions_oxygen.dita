@@ -1,9 +1,68 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
 <concept id="c_func_oxy">
- <title>Functions in oXygen XML Editor</title>
- <shortdesc/>
+ <title>Functions in <keyword keyref="EditorName"></keyword></title>
  <conbody>
-  <p/>
- </conbody>
+    <p>The <keyword keyref="ProductName"/> frameworks for <keyword keyref="EditorName"/> provide
+      additional functions to make handling <keyword keyref="ProductName"/> features more
+      comfortable.</p>
+    <section>
+      <title>Functions with <keyword keyref="ComponentConref"></keyword></title>
+      <p>As in the standard conref mechanism of DITA, <keyword keyref="EditorName_short"/>'s Author
+        mode displays content generated with <keyword keyref="ComponentConref"/> in the target file.
+        In addition, <keyword keyref="ProductName"/> integrates buttons that are displayed above the
+        generated content. <xref href="#./tab_buttons_oxy" format="dita"/> shows the functions of
+        these buttons.<table frame="all" rowsep="1" colsep="1" id="tab_buttons_oxy">
+          <title>Functions of buttons in <keyword keyref="ComponentConref"/>'s</title>
+          <tgroup cols="2" align="left">
+            <colspec colname="c1" colnum="1" colwidth="1.0*"/>
+            <colspec colname="c2" colnum="2" colwidth="1.0*"/>
+            <thead>
+              <row>
+                <entry>
+                  <p>Button</p>
+                </entry>
+                <entry>
+                  <p>Function</p>
+                </entry>
+              </row>
+            </thead>
+            <tbody>
+              <row>
+                <entry>
+                  <p><image id="button_refresh" href="images/button_refresh.png"/>
+                    <uicontrol>Refresh the <keyword keyref="ComponentConref"/></uicontrol></p>
+                </entry>
+                <entry>
+                  <p>Refreshes the displayed content when the source content changed. The refreshing
+                    works without saving the file that contains the <keyword
+                      keyref="ComponentConref"/>.</p>
+                </entry>
+              </row>
+              <row>
+                <entry>
+                  <p><image href="images/button_open_xsl.png" id="button_open_xsl"/>
+                    <uicontrol>Open <keyword keyref="ComponentConref"/> XSL Script
+                    file</uicontrol></p>
+                </entry>
+                <entry>
+                  <p>Opens the XSL script file that is used within the <keyword
+                      keyref="ComponentConref"/>.</p>
+                </entry>
+              </row>
+              <row>
+                <entry>
+                  <p><image href="images/button_open_xml.png" id="button_open_xml"/>
+                    <uicontrol>Open <keyword keyref="ComponentConref"/></uicontrol><uicontrol> XML
+                      Source file</uicontrol></p>
+                </entry>
+                <entry>
+                  <p>Opens the XML file with the source content.</p>
+                </entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </table></p>
+    </section>
+  </conbody>
 </concept>

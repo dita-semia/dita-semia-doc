@@ -2,8 +2,33 @@
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
 <concept id="c_audience">
  <title>Audience</title>
- <shortdesc/>
  <conbody>
-  <p/>
+  <p>This document is intended for technical writers who want to benefit from <keyword
+    keyref="ProductName"/> features by using and adapting the provided XSLT scripts, and for
+   information architects who want to create specialized semantic DITA frameworks.</p>
+  <p>To use and adapt the provided features, the following knowledge is assumed:</p>
+  <ul id="ul_gzt_332_sy">
+   <li>
+    <p>Solid knowledge of DITA</p>
+   </li>
+   <li>
+    <p>Basic knowledge of XSLT</p>
+   </li>
+   <li>
+    <p><?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>...<?oxy_custom_end?></p>
+   </li>
+  </ul>
+  <p>To create specialized semantic DITA frameworks, the following knowledge is assumed:</p>
+  <ul id="ul_xh2_knk_sy">
+   <li>
+    <p>Profound knowledge of DITA</p>
+   </li>
+   <li>
+    <p>Advanced knowledge of XSLT</p>
+   </li>
+   <li>
+    <p><?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>...<?oxy_custom_end?></p>
+   </li>
+  </ul>
  </conbody>
 </concept>

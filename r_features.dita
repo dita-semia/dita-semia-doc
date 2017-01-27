@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
 <reference id="r_features">
-  <title>Features</title>
-  <shortdesc/>
-  <refbody/>
+  <title>Feature Reference</title>
+  <shortdesc>This chapter contains information about standard parameters, custom parameters, and
+    specialized elements of the <keyword keyref="ProductName"/> features.</shortdesc>
 </reference>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_en4_gfm_2v">
+    <title>Including Dynamic Content in an SVG</title>
+    <shortdesc><keyword keyref="ComponentConref"></keyword> lets you create dynamic graphical content by including referenced content
+        in vector graphics. The script <filepath>svg-simple-test.xsl</filepath> generates an SVG graphic
+        of a box with static dimensions and inserts the title of the DITA topic where the
+        <keyword keyref="ComponentConref"></keyword> is placed in.</shortdesc>
+    <taskbody>
+        <prereq>
+            <ul id="ul_uvd_xwx_gv">
+                <li>
+                    <p>Your DITA topic has a title, for example:<fig id="fig_vqj_czn_pv">
+                            <image id="svg_simple_test_pre" href="images/svg_simple_test_pre.png"/>
+                        </fig></p>
+                </li>
+                <li>
+                    <p
+                        conref="reusable_content/p_prereq_adjust_topic.dita#ReusableComponent_pt1_yrq_nw/p_qt1_yrq_nw"
+                    />
+                </li>
+            </ul>
+        </prereq>
+        <context>
+            <p>To include dynamic content in an SVG, complete the following step:</p>
+        </context>
+        <steps id="steps_vyb_fbr_nv">
+            <step>
+                <cmd>Insert <codeph>&lt;fig xcr:xsl="svg-simple-test.xsl"/></codeph> at the position
+                    in your topic body where you want the dynamic graphical content to appear.</cmd>
+            </step>
+        </steps>
+        <result>
+            <p>A preview of the static box filled with the title of your DITA topic is automatically
+                displayed in Author mode:<fig id="fig_zrz_vzn_pv">
+                    <image id="svg_simple_test_post" href="images/svg_simple_test_post.png"/>
+                </fig></p>
+            <p>The referenced text is inserted centered with constant text size. Automatic line
+                wrapping or scaling is not supported yet.</p>
+        </result>
+    </taskbody>
+</task>

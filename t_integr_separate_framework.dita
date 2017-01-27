@@ -8,7 +8,7 @@
             <ul id="ul_c14_bwm_y5">
                 <li>
                     <p>You have integrated DITA-SEMIA in DITA-OT (see <xref
-                            href="t_integr_dita_ot.dita#t_integr_dita_ot"/>).</p>
+                        href="t_integr_dita_ot.dita#t_integr_dita_ot"/>).</p>
                 </li>
                 <li>
                     <p/>
@@ -22,25 +22,25 @@
         <steps id="steps_cv5_4bn_y5">
             <step>
                 <cmd>Add the jar library to the classpath:
-                        <codeph>dita-ot/plugins/org.dita-semia.resolver/java/oxygen/DitaSemiaOxygen.jar</codeph></cmd>
+                    <codeph>dita-ot/plugins/org.dita-semia.resolver/java/oxygen/DitaSemiaOxygen.jar</codeph></cmd>
             </step>
             <step>
                 <cmd>Set the "Extension-Bundle":
-                        <codeph>org.DitaSemia.Oxygen.DitaSemiaExtensionBundle</codeph> or
-                        <codeph>org.DitaSemia.Oxygen.DitaSemiaMapExtensionBundle</codeph></cmd>
+                    <codeph>org.DitaSemia.Oxygen.DitaSemiaExtensionBundle</codeph> or
+                    <codeph>org.DitaSemia.Oxygen.DitaSemiaMapExtensionBundle</codeph></cmd>
             </step>
             <step>
                 <cmd>Add the css files
-                        <codeph>dita-ot/plugins/org.dita-semia.resolver/oxygen-framework/css/xslt-conref.less</codeph></cmd>
+                    <codeph>dita-ot/plugins/org.dita-semia.resolver/oxygen-framework/css/xslt-conref.less</codeph></cmd>
             </step>
             <step>
                 <cmd>Add the library
-                        <codeph>dita-ot/plugins/org.dita-semia.resolver/java/ot/DitaSemiaOt.jar</codeph>
+                    <codeph>dita-ot/plugins/org.dita-semia.resolver/java/ot/DitaSemiaOt.jar</codeph>
                     to <i>all</i> DITA-OT transformation scenarios.</cmd>
             </step>
             <step>
                 <cmd>Add
-                        <codeph>dita-ot/plugins/org.dita-semia.resolver/schema/xslt-conref/xslt-conref.sch</codeph>
+                    <codeph>dita-ot/plugins/org.dita-semia.resolver/schema/xslt-conref/xslt-conref.sch</codeph>
                     to the validation scenario.</cmd>
             </step>
         </steps>

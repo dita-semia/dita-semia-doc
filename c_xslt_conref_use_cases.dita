@@ -1,9 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
 <concept id="c_xslt_conref_use_cases">
- <title>XSLT-Conref use cases</title>
- <shortdesc/>
+  <title><keyword keyref="ComponentConref"/> Sample Use Cases</title>
  <conbody>
-  <p/>
+   <p>The <keyword keyref="ComponentConref"/> sample use cases are stored in the folder
+        <filepath>org.dita-semia.resolver/samples/xslt-conref</filepath>.</p>
+   <p>Adjust the following settings to use <keyword keyref="ComponentConref"></keyword> in your DITA topics:<ul id="ul_gmq_cyy_gv">
+        <li>
+          <p>If the use case uses a specialized element, include the XML processing instruction
+            declaration that is directly given in the use case description.</p>
+        </li>
+        <li>
+          <p>If the use case does <i>not</i> use a specialized element, include the following XML
+            processing instruction declarations in your DITA
+            topic:<codeblock>&lt;?xml-model href="urn:dita-semia:xslt-conref:schema:xslt-conref-topic.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+&lt;?xml-model href="urn:dita-semia:xslt-conref:schema:xslt-conref-topic.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?></codeblock></p>
+          <p>In the <codeph>href</codeph> attribute values, replace the word "topic" by
+            "reference" if you work in a reference topic type. Concept and task topics are
+            not supported.</p>
+          <draft-comment author="TiMe">Is that correct?</draft-comment>
+        </li>
+        <li>
+          <p>In the root element of your DITA topic, declare the namespace prefixes that are used in
+            the use case:<ul id="ul_syw_yjp_pv">
+              <li>
+                <p><codeph>xmlns:xcr =
+                  "http://www.dita-semia.org/xslt-conref"</codeph></p>
+              </li>
+              <li>
+                <p><codeph>xmlns:xcrcp =
+                    "http://www.dita-semia.org/xslt-conref/custom-parameter"</codeph></p>
+              </li>
+            </ul></p>
+        </li>
+      </ul></p>
  </conbody>
 </concept>

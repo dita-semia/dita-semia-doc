@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_ksm_4tb_gv">
+    <title>Generating a Sequence Diagram</title>
+    <shortdesc>Sequence diagrams can be generated from DITA content with the XSLT script
+        <filepath>sequence-diagram.xsl</filepath>. It provides the required data for the diagram.
+        The script <filepath>draw-sequence-diagram.xsl</filepath> is responsible for the
+        visualization.</shortdesc>
+    <taskbody>
+        <prereq>
+            <ul id="ul_uvd_xwx_gv">
+                <li>
+                    <p
+                        conref="reusable_content/p_prereq_adjust_topic.dita#ReusableComponent_pt1_yrq_nw/p_qt1_yrq_nw"
+                    />
+                </li>
+            </ul>
+        </prereq>
+        <context>
+            <p>To generate a sequence diagram, include the following elements in the described order
+                in your DITA topic:</p>
+        </context>
+        <steps>
+            <step>
+                <cmd>In the first <codeph>codeph</codeph> element within the first
+                        <codeph>p</codeph> element of your topic, insert the name of the calling
+                    component, for example, "CallingCompName":</cmd>
+            </step>
+            <step>
+                <cmd>In the first <codeph>sl</codeph> element of your topic, insert each function
+                    call as a list item. Use the form
+                        <codeph>&lt;codeph>component-name.function-name&lt;/codeph></codeph>, for
+                    example:</cmd>
+                <stepxmp>
+                    <fig id="fig_o24_rsq_nv">
+                        <image id="sequence_diagram_sl" href="images/sequence_diagram_sl.png"/>
+                    </fig>
+                </stepxmp>
+            </step>
+            <step>
+                <cmd>Create a <codeph>fig</codeph> element and set the attribute value to
+                        <codeph>xcr:xsl="sequence-diagram.xsl"</codeph>.</cmd>
+            </step>
+        </steps>
+        <result>
+            <p>A sequence diagram is created from your function calls:<fig id="fig_gdt_h5q_nv">
+                    <image id="sequence_diagram_preview" href="images/sequence_diagram_preview.png"
+                    />
+                </fig></p>
+        </result>
+        <postreq>
+            <draft-comment author="TiMe">The following information could be shifted to another
+                topic.</draft-comment>
+            <p>In the presented example, both data source and <keyword keyref="ComponentConref"></keyword> are placed in the same
+                section. Two more realistic scenarios are:<ul id="ul_qy1_jgc_gv">
+                    <li>
+                        <p>The data is obtained from semantically specialized DITA content. For
+                            instance, the workflow of a component contains function calls with
+                            specialized elements.</p>
+                    </li>
+                    <li>
+                        <p>The data is specified in a section that is designated for this purpose
+                            only. It is displayed in <keyword keyref="EditorName"></keyword> but will be suppressed in the
+                            output.</p>
+                    </li>
+                </ul></p>
+        </postreq>
+    </taskbody>
+</task>

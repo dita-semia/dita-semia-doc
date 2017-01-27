@@ -1,9 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
 <concept id="c_base_arch">
- <title>Base architecture</title>
- <shortdesc/>
- <conbody>
-  <p/>
- </conbody>
+  <title>Base Architecture</title>
+  <conbody>
+    <section>
+      <title>Plug-Ins to DITA-OT</title>
+      <p><keyword keyref="ProductName"/> provides two plug-ins to DITA-OT. The plug-ins are
+        compatible with:</p>
+      <ul id="ul_nvs_gbs_sy">
+        <li>
+          <p>DITA <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>1.2 and
+            1.3<?oxy_custom_end?></p>
+        </li>
+        <li>
+          <p>DITA-OT versions:
+            <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>XXX<?oxy_custom_end?>
+          </p>
+        </li>
+      </ul>
+      <p>For more information about the DITA-OT plug-ins, see <xref href="c_dita-ot_plug-ins.dita"
+        />.</p>
+    </section>
+    <section>
+      <title>Frameworks for <keyword keyref="EditorName"/></title>
+      <p><keyword keyref="ProductName"/> comes with two preconfigured documentation frameworks for
+          <keyword keyref="EditorName"/>: one for topics and one for maps. These framework are
+        compatible with oXygen XML Editor
+        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>XXX<?oxy_custom_end?>. </p>
+      <p>The <keyword keyref="ProductName"/> frameworks integrate specific functions in <keyword
+          keyref="EditorName_short"/> to support authoring. For more information, see <xref
+          href="c_functions_oxygen.dita#c_func_oxy"/>.</p>
+    </section>
+  </conbody>
 </concept>

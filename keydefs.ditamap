@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+ <title>Key Definitions for DITA-SEMIA</title>
+ <keydef keys="ProductName">
+  <topicmeta>
+   <keywords>
+    <keyword>DITA-SEMIA</keyword>
+   </keywords>
+  </topicmeta>
+ </keydef>
+ <keydef keys="EditorName">
+  <topicmeta>
+   <keywords>
+    <keyword>oXygen XML Editor</keyword>
+   </keywords>
+  </topicmeta>
+ </keydef>
+ <keydef keys="EditorName_short">
+  <topicmeta>
+   <keywords>
+    <keyword>oXygen</keyword>
+   </keywords>
+  </topicmeta>
+ </keydef>
+ <keydef keys="ComponentConref">
+  <topicmeta>
+   <keywords>
+    <keyword>XSLT-Conref</keyword>
+   </keywords>
+  </topicmeta>
+ </keydef>
+ <keydef keys="ComponentGUI">
+  <topicmeta>
+   <keywords>
+    <keyword>XSLT-GUI</keyword>
+   </keywords>
+  </topicmeta>
+ </keydef>
+ <keydef keys="ComponentConbat">
+  <topicmeta>
+   <keywords>
+    <keyword>Conbat</keyword>
+   </keywords>
+  </topicmeta>
+ </keydef>
+ <keydef keys="ComponentAdvancedKeyref">
+  <topicmeta>
+   <keywords>
+    <keyword>Advanced-Keyref</keyword>
+   </keywords>
+  </topicmeta>
+ </keydef>
+</map>
